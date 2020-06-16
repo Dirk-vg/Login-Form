@@ -25,7 +25,7 @@ $passwordRepeat = $_POST['pwd-repeat'];
         exit();
     }
     elseif ($password !== $passwordRepeat) {
-        header("Location:../Signup.php?error=passwordcheck&mail=".$username."&mail=".$email);
+        header("Location:../Signup.php?error=passwordcheck&uid=".$username."&mail=".$email);
         exit();
     }
     else {
@@ -39,7 +39,7 @@ $passwordRepeat = $_POST['pwd-repeat'];
         else {
             mysqli_stmt_bind_param($stmt, "s", $username);
             mysqli_stmt_execute($stmt);
-            mysqly_stmt_store_result($stmt);
+            mysqli_stmt_store_result($stmt);
             $resultCheck = mysqli_stmt_num_rows($stmt);
             if ($resultCheck > 0) {
                 header("Location:../Signup.php?error=usertaken&mail=".$email);

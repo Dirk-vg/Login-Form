@@ -33,13 +33,16 @@ require "Header.php";
                 echo '<p class="signupsuccess">Signup successful!</p>'
             }
         ?>
-        <form class="form-signup" action="includes/Signup.inc.php" method="post">
-        <input type="text" name="uid" placeholder="Username">    
-        <input type="text" name="mail" placeholder="E-mail">    
+        <form class="form-signup" action="includes/Signup.inc.php" method="post">   
         <input type="password" name="pwd" placeholder="Password">    
         <input type="password" name="pwd-repeat" placeholder="Repeat password">
         <button type="submit" name="signup-submit">Signup</button>    
         </form>
+
+        <!-- The form which starts the password recovery process! -->
+        <a href="reset-password.php">Forgot your password?</a>
+
+
     </section>    
         </div>
     </main>

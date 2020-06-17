@@ -24,4 +24,3 @@
     <?php
     require "Footer.php";
     ?>
-
